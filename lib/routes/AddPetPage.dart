@@ -135,7 +135,7 @@ class FormAddPetState extends State<FormAddPet> {
                     ]
                   ),
                 ],
-              )
+              ),
             ),
           ),
         ],
