@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class AddPetPage extends StatelessWidget {
   @override
@@ -24,6 +27,8 @@ class FormAddPetState extends State<FormAddPet> {
   String _selectedType = 'Por favor escoge';
   //variable auxiliar SwitchListTile
   bool _rescue = false;
+  //image file for picker image
+  File _imageFile;
 
   //global key para validar
   GlobalKey<FormState> _formKey = GlobalKey();
@@ -105,6 +110,7 @@ class FormAddPetState extends State<FormAddPet> {
               });
             },
           ),
+          _chooseImage(context),
           SizedBox(//sized box permite manejar dimensiones de sus hijos
             width: double.infinity,//colocamos un ancho que se ajuste al padre
             child: RaisedButton(//declaramos el botón sin icono
@@ -133,6 +139,46 @@ class FormAddPetState extends State<FormAddPet> {
           ),
         ],
       ),
+    );
+  }
+
+  //función escoger imagen
+  Widget _chooseImage(BuildContext context) {
+    return Center(//centrareamos la imagen
+      child: Column(//columna para usar array
+        children: <Widget>[//array
+          _imageDefault(),//llamamos la funcion imagen por defecto
+          RaisedButton(//botón para seleccionar imagen
+            child: Text('Escoger Imágen'),//Texto del botón
+            //evento press que llama la función para seleccionar
+            //imagen pasando la fuente gallery o camera
+            onPressed: () => _pickImage(ImageSource.gallery)
+          )
+        ],
+      ),
+    );
+  }
+
+  _pickImage(ImageSource source) async {//funcion asincrona
+    //asignamos la fuente a la variable _imageFile
+    _imageFile = await ImagePicker.pickImage(source: source);
+    setState(() {//función set state
+      //asignamos la variable para que se refleje en la vista
+      _imageFile = _imageFile;
+    });
+  }
+
+  Widget _imageDefault () {//widget imagen por defecto
+    return FutureBuilder<File>(//retornamos un future builder de la imagen
+      builder: (context, snapshot) {//snapshot de la imagen seleccionada
+        return Container(//contenedor
+          padding: EdgeInsets.all(20.0),//padding
+          child: _imageFile == null //si la imagen es nula
+                ? Text ('Seleccionar imagen')//colocamos un texto
+                //si no es nula retornamos la imagen seleccionada
+                : Image.file(_imageFile, width: 300, height: 300),
+        );
+      }
     );
   }
 
