@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lab_02/routes/AddPetPage.dart';
-import 'package:lab_02/routes/EditPetPage.dart';//importamos Añadir amigo
+import 'package:lab_03_flutter_curso/routes/AddPetPage.dart';
+import 'package:lab_03_flutter_curso/routes/EditPetPage.dart';//importamos Añadir amigo
 
 class AdminPage extends StatelessWidget {
   @override
