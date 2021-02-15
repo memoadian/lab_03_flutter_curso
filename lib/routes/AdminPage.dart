@@ -57,7 +57,7 @@ class AdminPage extends StatelessWidget {
           child: ListTile(//Listile para ordenar
             title: Text('Amigo'),//titulo
             subtitle: Text('Edad: 0 años'),//subtitulo
-            leading: Image.asset('images/logo_flutter.png'),//icono
+            leading: Image.asset('assets/logo_flutter.png'),//icono
             trailing: Row(//Row para acomodar iconos al final
               mainAxisSize: MainAxisSize.min,//ordenamiento horizontal
               children: <Widget>[//array
@@ -93,7 +93,7 @@ class AdminPage extends StatelessWidget {
           child: ListTile(//Listile para ordenar
             title: Text('Amigo'),//titulo
             subtitle: Text('Edad: 0 años'),//subtitulo
-            leading: Image.asset('images/logo_flutter.png'),//icono
+            leading: Image.asset('assets/logo_flutter.png'),//icono
             trailing: Row(//Row para acomodar iconos al final
               mainAxisSize: MainAxisSize.min,//ordenamiento horizontal
               children: <Widget>[//array

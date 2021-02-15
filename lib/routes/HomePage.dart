@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[//array
                 Container (//contenedor de imagen
                   padding: EdgeInsets.all(10.0),//padding
-                  child: Image.asset('images/logo_flutter.png'),//imagen interna
+                  child: Image.asset('assets/logo_flutter.png'),//imagen interna
                 ),
                 Container (//contenedor de texto
                   padding: EdgeInsets.all(10.0),//padding
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[//array
                 Container (//contenedor de imagen
                   padding: EdgeInsets.all(10.0),//padding
-                  child: Image.asset('images/logo_flutter.png'),//imagen interna
+                  child: Image.asset('assets/logo_flutter.png'),//imagen interna
                 ),
                 Container (//contenedor de texto
                   padding: EdgeInsets.all(10.0),//padding
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
               children: <Widget>[//array
                 Container (//contenedor de imagen
                   padding: EdgeInsets.all(10.0),//padding
-                  child: Image.asset('images/logo_flutter.png'),//imagen interna
+                  child: Image.asset('assets/logo_flutter.png'),//imagen interna
                 ),
                 Container (//contenedor de texto
                   padding: EdgeInsets.all(10.0),//padding
