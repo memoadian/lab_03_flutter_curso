@@ -228,9 +228,9 @@ class FormAddPetState extends State<FormAddPet> {
     _formKey.currentState!.validate();
   }
 
-  String _validReq(String value, String message) {
+  String? _validReq(String value, String message) {
     //colocamos un condicional corto
-    return (value.length == 0) ? message : "";
+    return (value.length == 0) ? message : null;
   }
 
   String _validAge(String? value, String message) {
