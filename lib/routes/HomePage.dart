@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lab_03_flutter_curso/routes/DetailPetPage.dart'; //importamos la página de detalle
+import 'package:lab_03_flutter_curso/routes/detail_pet_page.dart'; //importamos la página de detalle
 
-class HomePage extends StatelessWidget {
+class HomePetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,13 +40,7 @@ class HomePage extends StatelessWidget {
                     label: Text('Ver amigo'), //nombre del botón
                     onPressed: () {
                       //evento press
-                      Navigator.push(
-                        context, //mandamos el navegador
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              DetailPetPage(), //a la página de detalle
-                        ),
-                      );
+                      Navigator.pushNamed(context, 'detail');
                     },
                   ),
                 )
@@ -87,13 +81,7 @@ class HomePage extends StatelessWidget {
                     label: Text('Ver amigo'), //nombre del botón
                     onPressed: () {
                       //evento press
-                      Navigator.push(
-                        context, //mandamos el navegador
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              DetailPetPage(), //a la página de detalle
-                        ),
-                      );
+                      Navigator.pushNamed(context, 'detail');
                     },
                   ),
                 )
@@ -131,13 +119,7 @@ class HomePage extends StatelessWidget {
                     label: Text('Ver amigo'), //nombre del botón
                     onPressed: () {
                       //evento press
-                      Navigator.push(
-                        context, //mandamos el navegador
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              DetailPetPage(), //a la página de detalle
-                        ),
-                      );
+                      Navigator.pushNamed(context, 'detail');
                     },
                   ),
                 )
